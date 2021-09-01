@@ -252,15 +252,6 @@ body{
     transition: ease-in-out.3s;
 }
 
-.fog-bottom-fade{
-    height: 8rem;
-    width: 100%;
-    background-image: linear-gradient(180deg, transparent, rgba(37,37,37,0.5), #111);
-    position: absolute;
-    top: 49vw;
-}
-
-
 .popular, .filipino-movies{
     margin-top: 4em;
     padding-left: 4em;
