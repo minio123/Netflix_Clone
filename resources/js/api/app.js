@@ -75,7 +75,4 @@ function showPhPopular(ph_movie_data){
         const {title, poster_path} = movie;
         movileEl.innerHTML += `<img src="${IMG_URL+poster_path}" alt="${title}" class="img-poster">`;//creating a html element and concatinating on div element with the id of ph_movies. The concatenated images here are the generated image on the page.
     });
-
-    
-
 }
