@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    padding: 5px 3%;
+    height: 70px;
+    width: 100%;
+    background:  linear-gradient(to bottom,rgba(0,0,0,.7) 10%,rgba(0,0,0,0));
+    transition: ease-in-out .3s;
+}
+
+.mobile-nav{
+    visibility: hidden;
+    height: 50px;
+    padding-top: 1.5em;
+}
+
+.mobile-nav-content{
+    background-color: #000;
+    width: 240px;
+    opacity: .9;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    display: none;
+}
+
+.mobile-nav-content .active
+{
+    font-weight: 600;
+}
+
+.mobile-nav-content a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #f7f7f7;;
+}
+
+.mobile-nav-content div{
+    margin: 15% 0;
+    text-align: center;
+}
+
+.mobile-nav-content i, .mobile-nav-content hr{
+    position: relative;
+    color: #f7f7f7;
+    margin: -4% 0 0 0;
+}
+
+.mobile-nav-content i{
+    margin-left: 73%;
+}
+
+
+.mobile-nav > a{
+    margin-left: 20px;
+    font-weight: 400;
+    color: #f7f7f7;
+    font-size: 1.1vw;
+    text-decoration: none;
+}
+    
+.scrolled{
+    transition: ease-in-out .3s;
+    background: rgba(0,0,0,1);
+    z-index: 9999;
+}
+
+.logo > img{
+    width: 80px;
+    margin-right: 1vw;
+}
+
+.logo-menu .logo, .logo-menu .nav-bar-menu, .mobile-nav{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.nav-bar-menu > ul{
+    list-style: none;
+    display: flex;
+}
+
+.nav-bar-menu > ul > li{
+    margin-left: 20px;
+    font-weight: 400;
+    color: #f7f7f7;
+    font-size: .7vw;
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar-menu > ul > .active{
+    font-weight: 700;
+}
+
+.side-buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.side-buttons button{
+    color: #f7f7f7;
+    background: transparent;
+    border: none;
+    font-size: 1.2vw;
+    margin-left: 1.5em;
+}
+
+.side-buttons > button > img{
+    width: 30px;
+    border-radius: 5px;
+}
+
+.side-buttons button:hover{
+    cursor: pointer;
+}
+
+.user-settings{
+    display: flex;
+    align-items: center;
+}
+
+.user-settings i {
+    font-size: 15px;
+    margin-left: 5px;
+    transition: .5s;
+}
+
+.user-settings:hover > i{
+    transform: rotate(180deg);
+    transition: .5s;
+    
+}
+
+.settings{
+    position: absolute;
+    top: 100%;
+    right: 3%;
+    text-align: left;
+    display: none;
+    transition: .5s;
+}
+
+.user-settings:hover > .settings{
+    display: block;
+    transition: .5s;
+}
+
+.settings > i{
+    margin-bottom: -4%;
+    position: relative;
+    left: 70%;
+    color: #f7f7f7;
+    font-size: 12px;
+}
+
+.settings-content{
+    width: 170px;
+    background-color: #000;
+    opacity: .9;
+    padding: 10% 1em 1% 10%;
+}
+
+.settings-content div{
+    margin-bottom: 20%;
+}
+
+.settings-content a{
+    font-weight: 500;
+    font-size: 12px;
+    color: #f7f7f7;
+    text-decoration: none;
+}
+
+.settings-content a:hover{
+    text-decoration: underline;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 55vw;
+    padding:  0 0 0 3%;
+}
+
+.header-title > h2{
+    color: #f7f7f7;
+    margin-bottom: 1em;
+    font-size: 1.8vw;
+}
+
+.movie-overview{
+    width: 40%;
+    line-height: 1.5;
+    font-size: 1.2vw;
+    margin-bottom: 2em;
+    color: #f7f7f7;
+    font-weight: 400;
+}
+
+.play-btn{
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 2rem;
+    padding-right: 2.4rem;
+    border-radius: 5px;
+    border: hidden;
+    font-size: 1.1vw;
+    font-weight: 700;
+    background: #f7f7f7;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    margin-right: 5px;
+}
+
+.play-btn:hover{
+    background: rgba(247, 247, 247, .8);
+    transition: ease-in-out .3s;
+}
+
+.more-info-btn{
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 2rem;
+    padding-right: 2.4rem;
+    border-radius: 5px;
+    background: rgba(109, 109, 110, 0.7);
+    color: f7f7f7;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    border: hidden;
+    font-size: 1.1vw;
+}
+
+.more-info-btn:hover{
+    background: rgba(109, 109, 110, 0.6);
+    transition: ease-in-out.3s;
+}
+
+.fog-bottom-fade{
+    height: 8rem;
+    width: 100%;
+    background-image: linear-gradient(180deg, transparent, rgba(37,37,37,0.5), #111);
+    position: absolute;
+    top: 49vw;
+}
+
+
+.popular, .filipino-movies{
+    margin-top: 4em;
+    padding-left: 4em;
+    z-index: 999;
+}
+
+.popular > h2, .filipino-movies > h2{
+    margin-bottom: 1em;
+    color: #fff;
+}
+
+.img-poster{
+    width: 30%;
+    object-fit: contain;
+    max-height: 300px;
+    margin-right: 10px;
+    transition:  transform 450ms;
+    border-radius: 5px;
+}
+
+.posters{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y:hidden;
+    margin-bottom: 4em;
+}
+
+.posters::-webkit-scrollbar{
+    display: none;
+}
+
+.img-poster:hover{
+    transform: scale(1.15);
+}
+
+@media only screen and (max-width: 884px){
+    .nav-bar-menu {
+        visibility: hidden;
+    }
+
+    .mobile-nav{
+        visibility: visible;
+    }
+
+    .mobile-nav-content{
+        display: none;
+        transition: .5s;
+    }
+
+    .mobile-nav:hover .mobile-nav-content{
+        display: block;
+        transition: .5s;
+    }
+    
+}

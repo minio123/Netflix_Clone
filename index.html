@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/layout.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Netflix clone</title>
+</head>
+<body>
+    <!--header-->
+    <div class="nav-menu" id="nav_menu">
+        <div class="logo-menu">       
+            <div class="logo">
+                <img src="/resources/img/asset/nav-menu/Netflix-Logo.png" alt="" class="menu-logo">
+            </div>
+            <div class="mobile-nav">
+                <a href="#">Browse&nbsp; <i class="fa fa-sort-down"></i></a>
+                <div class="mobile-nav-content">
+                    <i class="fa fa-sort-up"></i>
+                    <hr>
+                    <div class="mobile-nav-body">
+                        <div>
+                            <a class="active" href="#">Home</a>
+                        </div>
+                        <div>
+                            <a href="#">TV Shows</a>
+                        </div>
+                        <div>
+                            <a href="#">Movies</a>
+                        </div>
+                        <div>
+                            <a href="#">New & Popular</a>
+                        </div>
+                        <div>
+                            <a href="#">My Lists</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="nav-bar-menu">
+                <ul>
+                    <li class="active">Home</li>
+                    <li>TV Shows</li>
+                    <li>Movies</li>
+                    <li>New & Popular</li>
+                    <li>My Lists</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="side-buttons">
+            <button><i class="fa fa-search"></i></button>
+            <button><i class="fa fa-bell"></i></button>
+            <button class="user-settings">
+                <img src="/resources/img/asset/nav-menu/user-default.jpg" alt="">&nbsp;
+                <i class="fa fa-sort-down"></i>
+                <div class="settings">
+                    <i class="fa  fa-sort-up"></i>
+                    <div class="settings-content">
+                        <div>
+                            <a href="#">Account</a>
+                        </div>
+                        <div>
+                            <a href="#">Help Center</a>
+                        </div>
+                        <div>
+                            <a href="#">Sign Out Netflix</a>
+                        </div>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </div>
+    <div id="movie_top">
+        <!-- MOVIE BANNER WILL BE CREATED HERE -->
+        <div class="fog-bottom-fade"></div>
+    </div>
+    <div class="row popular">
+        <!--POPULAR ON NETFLIX-->
+        <h2>Popular on Netflix</h2>
+        <div class="posters" id="posters">
+            <!--POSTER FOR MOVIES WILL BE GENERATED HERE-->
+        </div>
+    </div>
+    <div class="row filipino-movies">
+        <!--POPULAR ON NETFLIX-->
+        <h2>Popular in the Philippines</h2>
+        <div class="posters" id="ph_movies">
+            <!--POSTER FOR MOVIES WILL BE GENERATED HERE-->
+        </div>
+    </div>
+    <script src="/resources/js/api/app.js"></script>
+    <script src="/resources/js/template.js"></script>
+</body>
+</html>
