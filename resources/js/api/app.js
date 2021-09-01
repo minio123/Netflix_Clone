@@ -3,24 +3,25 @@ const API_KEY = 'api_key=8580bc95b6e9bf907a7ac3cc6227d674';
 const BASE_URL = 'https://api.themoviedb.org/3';
 
 const API_POPULAR_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&'+API_KEY;
-const API_PH_MOVIE_URL = BASE_URL + '/discover/movie/?certification_country=PH&sort_by=vote_average.desc&'+API_KEY;
+const API_PH_MOVIE_URL = BASE_URL + '/discover/movie/?sort_by=vote_average.desc&'+API_KEY;
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const IMAG_BANNER_URL = 'https://image.tmdb.org/t/p/original';
 
 //calling the functions for fetching movies
-getMovies(API_POPULAR_URL,API_PH_MOVIE_URL);
+getPopular(API_POPULAR_URL);
+getPhPopular(API_PH_MOVIE_URL);
 
-function getMovies(popular_url,ph_movie_url){
+function getPopular(popular_url){
     fetch(popular_url).then(res => res.json()).then(data =>{//fetching all popular movies from API
         showPopular(data);//calling function that will show the popular movies and passing the data fecthed from the API
         showHeaderMovie(data);//calling function that will created a movie banner at the top op the page
     })
+}
 
+function getPhPopular(ph_movie_url){
     fetch(ph_movie_url).then(res => res.json()).then(data =>{//fetching all popular movies from Philippines from API
         showPhPopular(data);//calling function that will show the popular movies and passing the data fecthed from the API
     })
-
-
 }
 
 function showHeaderMovie(movie_banner){
@@ -75,4 +76,7 @@ function showPhPopular(ph_movie_data){
         const {title, poster_path} = movie;
         movileEl.innerHTML += `<img src="${IMG_URL+poster_path}" alt="${title}" class="img-poster">`;//creating a html element and concatinating on div element with the id of ph_movies. The concatenated images here are the generated image on the page.
     });
+
+    
+
 }
